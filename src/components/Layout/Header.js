@@ -2,12 +2,12 @@ import React from "react";
 import MealsImg from "../../assest/meals.jpg";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
-function Header() {
+function Header(props) {
   return (
     <>
       <header className={classes.header}>
         <h1> ReactMelas</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onShowCart} />
       </header>
       <div className={classes["main-image"]}>
         <img src={MealsImg} alt="table of food" />
